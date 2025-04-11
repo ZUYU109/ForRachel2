@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
+    <title>For Rachel 💌</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            font-family: 'Special Gothic Expanded One', sans-serif;
+        }
+
+        body {
+            background-image: url('rachel.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 120% 100%;
+        }
+
+        .overlay {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white;
+            text-align: center;
+            backdrop-filter: blur(2px);
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 10px;
+            background-color: #ff6fa4;
+            color: white;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+        }
+
+        .message {
+            display: none;
+            margin-top: 30px;
+            font-size: 1.1rem;
+            color:#ADD8E6;
+            font-weight: bold;
+            animation: fadeIn 2s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Overlay Content -->
+    <div class="overlay">
+        <button onclick="showConfession()">Click me, Rachel 💌</button>
+
+        <div class="message" id="message">
+            <p>Rachel,</p>
+            <p>From the very first time we talked, there was a spark — something rare, something beautiful.</p>
+            <p>Your laugh, your kindness, the way you see the world — it all made me feel something I can't quite put into words.</p>
+            <p>I don’t know where this will go, but I know this: I’d love to explore it with you, step by step, heart to heart.</p>
+            <p>So this is me, being honest, being brave — I love you, Rachel. More than just a little.</p>
+            <p>I admit above words is referencing online, with my English level couldn't write such words.</p>
+            <p>But all of the above, are my voice.</p>
+            <p>I Love You</p>
+            <p>🌸</p>
+          </div>
+    </div>
+
+    <script>
+        function showConfession() {
+            document.querySelector("button").style.display = "none";
+            document.getElementById("message").style.display = "block";
+        }
+    </script>
+
+</body>
+
+</html>
